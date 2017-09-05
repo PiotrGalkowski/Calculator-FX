@@ -81,7 +81,9 @@ public class Controller implements Initializable{
 
     @FXML
     private void backspaceButtonClicked(){
-
+        String text = screen.getText();
+        String newText = text.substring(0, text.length()-1);
+        screen.setText(newText);
     }
 
     @FXML
