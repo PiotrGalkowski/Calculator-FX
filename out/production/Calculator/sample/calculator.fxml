@@ -97,9 +97,9 @@
                   <DropShadow color="#cc0000" />
                </effect>
             </Button>
-            <Button fx:id="zero" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#zeroClicked" prefHeight="59.0" prefWidth="100.0" text="0" GridPane.rowIndex="3">
+            <Button fx:id="clear" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#clearClicked" prefHeight="59.0" prefWidth="100.0" text="clear" GridPane.rowIndex="3">
                <font>
-                  <Font size="33.0" />
+                  <Font size="28.0" />
                </font>
                <effect>
                   <DropShadow color="#cc0000" />
@@ -113,7 +113,7 @@
                   <DropShadow color="#cc0000" />
                </effect>
             </Button>
-            <Button fx:id="doubleZero" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#anyDigitClicked" prefHeight="59.0" prefWidth="100.0" text="00" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <Button fx:id="zero" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#anyDigitClicked" prefHeight="59.0" prefWidth="100.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <font>
                   <Font size="33.0" />
                </font>

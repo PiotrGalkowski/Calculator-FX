@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Calculator/sample/Logowanie.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Calculator/sample/Controller.class" afterPath="$PROJECT_DIR$/out/production/Calculator/sample/Controller.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/sample/Controller.java" afterPath="$PROJECT_DIR$/src/sample/Controller.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Calculator/sample/calculator.fxml" afterPath="$PROJECT_DIR$/out/production/Calculator/sample/calculator.fxml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -375,7 +375,7 @@
       <workItem from="1504114413451" duration="24000" />
       <workItem from="1504114577520" duration="1117000" />
       <workItem from="1504207758475" duration="731000" />
-      <workItem from="1504630247360" duration="7786000" />
+      <workItem from="1504630247360" duration="7878000" />
     </task>
     <task id="LOCAL-00001" summary="add operation's methods">
       <created>1504646039122</created>
@@ -384,11 +384,18 @@
       <option name="project" value="LOCAL" />
       <updated>1504646039122</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add backspace and clear buttons and methods">
+      <created>1504646459320</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1504646459320</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24285000" />
+    <option name="totallyTimeSpent" value="24377000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
@@ -438,7 +445,8 @@
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <MESSAGE value="add operation's methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="add operation's methods" />
+    <MESSAGE value="add backspace and clear buttons and methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="add backspace and clear buttons and methods" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
