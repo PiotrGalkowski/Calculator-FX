@@ -13,25 +13,21 @@
    <children>
       <VBox prefHeight="115.0" prefWidth="600.0" spacing="20.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <TextArea maxHeight="-Infinity" minHeight="-Infinity" nodeOrientation="RIGHT_TO_LEFT" prefHeight="100.0" prefWidth="472.0" wrapText="true">
-               <padding>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-               </padding>
-               <effect>
-                  <DropShadow color="#660000" />
-               </effect>
+            <TextField fx:id="screen" nodeOrientation="RIGHT_TO_LEFT" prefHeight="92.0" prefWidth="550.0">
                <font>
-                  <Font size="40.0" />
+                  <Font size="33.0" />
                </font>
-            </TextArea>
+            </TextField>
          </children>
          <padding>
             <Insets left="25.0" right="25.0" top="20.0" />
          </padding>
       </VBox>
-      <GridPane layoutY="115.0" prefHeight="278.0" prefWidth="400.0">
+      <GridPane layoutY="115.0" prefHeight="278.0" prefWidth="600.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
@@ -42,7 +38,7 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="seven" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onMouseClicked="#clickSeven" prefHeight="59.0" prefWidth="100.0" text="7">
+            <Button fx:id="seven" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#anyDigitClicked" prefHeight="59.0" prefWidth="100.0" text="7">
                <font>
                   <Font size="33.0" />
                </font>
@@ -53,7 +49,7 @@
                   <Insets />
                </GridPane.margin>
             </Button>
-            <Button fx:id="eight" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="59.0" prefWidth="100.0" text="8" GridPane.columnIndex="1">
+            <Button fx:id="eight" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#anyDigitClicked" prefHeight="59.0" prefWidth="100.0" text="8" GridPane.columnIndex="1">
                <font>
                   <Font size="33.0" />
                </font>
@@ -61,7 +57,7 @@
                   <DropShadow color="#cc0000" />
                </effect>
             </Button>
-            <Button fx:id="nine" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="59.0" prefWidth="100.0" text="9" GridPane.columnIndex="2">
+            <Button fx:id="nine" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#anyDigitClicked" prefHeight="59.0" prefWidth="100.0" text="9" GridPane.columnIndex="2">
                <font>
                   <Font size="33.0" />
                </font>
@@ -69,7 +65,7 @@
                   <DropShadow color="#cc0000" />
                </effect>
             </Button>
-            <Button fx:id="two" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="59.0" prefWidth="100.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <Button fx:id="two" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#anyDigitClicked" prefHeight="59.0" prefWidth="100.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <font>
                   <Font size="33.0" />
                </font>
@@ -77,7 +73,7 @@
                   <DropShadow color="#cc0000" />
                </effect>
             </Button>
-            <Button fx:id="three" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="59.0" prefWidth="100.0" text="3" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <Button fx:id="three" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#anyDigitClicked" prefHeight="59.0" prefWidth="100.0" text="3" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <font>
                   <Font size="33.0" />
                </font>
@@ -85,7 +81,7 @@
                   <DropShadow color="#cc0000" />
                </effect>
             </Button>
-            <Button fx:id="six" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="59.0" prefWidth="100.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <Button fx:id="six" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#anyDigitClicked" prefHeight="59.0" prefWidth="100.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <font>
                   <Font size="33.0" />
                </font>
@@ -93,7 +89,7 @@
                   <DropShadow color="#cc0000" />
                </effect>
             </Button>
-            <Button fx:id="four" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="59.0" prefWidth="100.0" text="4" GridPane.rowIndex="1">
+            <Button fx:id="four" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#anyDigitClicked" prefHeight="59.0" prefWidth="100.0" text="4" GridPane.rowIndex="1">
                <font>
                   <Font size="33.0" />
                </font>
@@ -101,7 +97,15 @@
                   <DropShadow color="#cc0000" />
                </effect>
             </Button>
-            <Button fx:id="zero" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="59.0" prefWidth="100.0" text="0" GridPane.rowIndex="3">
+            <Button fx:id="clear" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#clearClicked" prefHeight="59.0" prefWidth="100.0" text="clear" GridPane.rowIndex="3">
+               <font>
+                  <Font size="28.0" />
+               </font>
+               <effect>
+                  <DropShadow color="#cc0000" />
+               </effect>
+            </Button>
+            <Button fx:id="five" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#anyDigitClicked" prefHeight="59.0" prefWidth="100.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <font>
                   <Font size="33.0" />
                </font>
@@ -109,7 +113,7 @@
                   <DropShadow color="#cc0000" />
                </effect>
             </Button>
-            <Button fx:id="five" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="59.0" prefWidth="100.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <Button fx:id="zero" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#anyDigitClicked" prefHeight="59.0" prefWidth="100.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <font>
                   <Font size="33.0" />
                </font>
@@ -117,15 +121,7 @@
                   <DropShadow color="#cc0000" />
                </effect>
             </Button>
-            <Button fx:id="doubleZero" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="59.0" prefWidth="100.0" text="00" GridPane.columnIndex="1" GridPane.rowIndex="3">
-               <font>
-                  <Font size="33.0" />
-               </font>
-               <effect>
-                  <DropShadow color="#cc0000" />
-               </effect>
-            </Button>
-            <Button fx:id="one" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="59.0" prefWidth="100.0" text="1" GridPane.rowIndex="2">
+            <Button fx:id="one" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#anyDigitClicked" prefHeight="59.0" prefWidth="100.0" text="1" GridPane.rowIndex="2">
                <font>
                   <Font size="33.0" />
                </font>
@@ -141,44 +137,74 @@
                   <DropShadow color="#cc0000" />
                </effect>
             </Button>
+            <Button fx:id="divide" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#someOperation" prefHeight="59.0" prefWidth="100.0" text="/" GridPane.columnIndex="3">
+               <effect>
+                  <DropShadow color="#cee408" />
+               </effect>
+               <font>
+                  <Font size="33.0" />
+               </font>
+            </Button>
+            <Button fx:id="backspace" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#backspaceButtonClicked" prefHeight="59.0" prefWidth="100.0" text="backspace" GridPane.columnIndex="4">
+               <effect>
+                  <DropShadow color="#cee408" />
+               </effect>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="multiply" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#someOperation" prefHeight="59.0" prefWidth="100.0" text="*" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <effect>
+                  <DropShadow color="#cee408" />
+               </effect>
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Button>
+            <Button fx:id="sqr" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#sqrButtonClicked" prefHeight="59.0" prefWidth="100.0" text="sqr" GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <effect>
+                  <DropShadow color="#cee408" />
+               </effect>
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Button>
+            <Button fx:id="subtract" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#someOperation" prefHeight="59.0" prefWidth="100.0" text="-" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <effect>
+                  <DropShadow color="#cee408" />
+               </effect>
+               <font>
+                  <Font size="33.0" />
+               </font>
+            </Button>
+            <Button fx:id="power" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#someOperation" prefHeight="59.0" prefWidth="100.0" text="pow" GridPane.columnIndex="4" GridPane.rowIndex="2">
+               <effect>
+                  <DropShadow color="#cee408" />
+               </effect>
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Button>
+            <Button fx:id="add" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#someOperation" prefHeight="59.0" prefWidth="100.0" text="+" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <effect>
+                  <DropShadow color="#cee408" />
+               </effect>
+               <font>
+                  <Font size="33.0" />
+               </font>
+            </Button>
+            <Button fx:id="equals" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#equalButtonClicked" prefHeight="59.0" prefWidth="100.0" text="=" GridPane.columnIndex="4" GridPane.rowIndex="3">
+               <effect>
+                  <DropShadow color="#cee408" />
+               </effect>
+               <font>
+                  <Font size="33.0" />
+               </font>
+            </Button>
          </children>
          <padding>
             <Insets left="25.0" right="25.0" top="20.0" />
          </padding>
-      </GridPane>
-      <GridPane layoutX="375.0" layoutY="136.0" prefHeight="131.0" prefWidth="202.0">
-        <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        </rowConstraints>
-         <children>
-            <Button mnemonicParsing="false" text="Button" />
-            <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="1" />
-            <Button mnemonicParsing="false" text="Button" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" text="Button" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-         </children>
-      </GridPane>
-      <Pane layoutX="379.0" layoutY="267.0" prefHeight="131.0" prefWidth="100.0">
-         <children>
-            <Button layoutX="14.0" layoutY="47.0" mnemonicParsing="false" text="Button" />
-         </children>
-      </Pane>
-      <GridPane layoutX="479.0" layoutY="263.0" prefHeight="131.0" prefWidth="100.0">
-        <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-        </rowConstraints>
-         <children>
-            <Button mnemonicParsing="false" text="Button" GridPane.rowIndex="1" />
-            <Button mnemonicParsing="false" text="Button" />
-         </children>
       </GridPane>
    </children>
 </AnchorPane>
