@@ -11,7 +11,9 @@ import java.util.ResourceBundle;
 
 public class Controller implements Initializable{
 
-    private int firstNumber;
+    private String firstText;
+    private int firstIntNumber;
+    private double firstDoubleNumber;
     private String operation;
 
     @FXML
@@ -46,50 +48,106 @@ public class Controller implements Initializable{
     @FXML
     private void equalButtonClicked(){
         String nextText = screen.getText();
-        int nextNumber = Integer.parseInt(nextText);
-        int score = 0;
 
-        switch (operation){
-            case "+":
-                score = Math.addExact(firstNumber, nextNumber);
-                break;
-            case "-":
-                score = Math.subtractExact(firstNumber, nextNumber);
-                break;
-            case "*":
-                score = Math.multiplyExact(firstNumber, nextNumber);
-                break;
-            case "/":
-                score = Math.floorDiv(firstNumber, nextNumber);
-                break;
-            case "pow":
-                score = (int) Math.pow(firstNumber, nextNumber);
-                break;
-            default:
-                break;
+        int intScore = 0;
+        double doubleScore = 0;
+
+        if(firstText.contains(".") || nextText.contains(".")){
+            if(firstIntNumber != 0){
+                firstDoubleNumber = (double) firstIntNumber;
+            }
+
+            double nextNumber = Double.parseDouble(nextText);
+            
+            switch (operation){
+                case "+":
+                    doubleScore = firstDoubleNumber + nextNumber;
+                    break;
+                case "-":
+                    doubleScore = firstDoubleNumber - nextNumber;
+                    break;
+                case "*":
+                    doubleScore = firstDoubleNumber * nextNumber;
+                    break;
+                case "/":
+                    doubleScore = firstDoubleNumber / nextNumber;
+                    break;
+                case "pow":
+                    doubleScore = Math.pow(firstDoubleNumber, nextNumber);
+                    break;
+                default:
+                    break;
+            }
+
+            screen.setText(String.valueOf(doubleScore));
+
+       }else {
+            int nextNumber = Integer.parseInt(nextText);
+            switch (operation){
+                case "+":
+                    intScore = firstIntNumber + nextNumber;
+                    break;
+                case "-":
+                    intScore = firstIntNumber - nextNumber;
+                    break;
+                case "*":
+                    intScore = firstIntNumber * nextNumber;
+                    break;
+                case "/":
+                    if(firstIntNumber % nextNumber == 0){
+                        intScore = firstIntNumber / nextNumber;
+                        screen.setText(String.valueOf(intScore));
+                    }else{
+                        doubleScore = (double) firstIntNumber / (double) nextNumber;
+                        screen.setText(String.valueOf(doubleScore));
+                    }
+                    break;
+                case "pow":
+                    intScore = (int) Math.pow(firstIntNumber, nextNumber);
+                    break;
+                default:
+                    break;
+            }
+            if(operation.equals("/")){
+                return;
+            }else{
+                screen.setText(String.valueOf(intScore));
+            }
+        }
+    }
+
+    @FXML
+    private void sqrButtonClicked(){
+        firstText = screen.getText();
+        double score = 0;
+
+        if(firstText.contains(".")){
+            firstDoubleNumber = Double.parseDouble(firstText);
+            score = Math.sqrt(firstDoubleNumber);
+
+        }else{
+            firstIntNumber = Integer.parseInt(firstText);
+            score = Math.sqrt(firstIntNumber);
         }
         screen.setText(String.valueOf(score));
     }
 
     @FXML
-    private void sqrButtonClicked(){
-        String text = screen.getText();
-        firstNumber = Integer.parseInt(text);
-        int score = (int) Math.sqrt(firstNumber);
-        screen.setText(String.valueOf(score));
-    }
-
-    @FXML
     private void backspaceButtonClicked(){
-        String text = screen.getText();
-        String newText = text.substring(0, text.length()-1);
+        firstText = screen.getText();
+        String newText = firstText.substring(0, firstText.length()-1);
         screen.setText(newText);
     }
 
     @FXML
     private void someOperation(ActionEvent event){
-        String firstText = screen.getText();
-        firstNumber = Integer.parseInt(firstText);
+        firstText = screen.getText();
+        if(firstText.contains(".")){
+            firstDoubleNumber = Double.parseDouble(firstText);
+        }else{
+            firstIntNumber = Integer.parseInt(firstText);
+        }
+
         screen.setText("");
         operation = ((Button) event.getSource()).getText();
     }

@@ -9,14 +9,17 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="410.0" prefWidth="600.0" style="-fx-background-color: #ccccb3;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="410.0" prefWidth="600.0" style="-fx-background-color: #000200;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <VBox prefHeight="115.0" prefWidth="600.0" spacing="20.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <TextField fx:id="screen" nodeOrientation="RIGHT_TO_LEFT" prefHeight="92.0" prefWidth="550.0">
+            <TextField fx:id="screen" alignment="CENTER_RIGHT" maxWidth="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="92.0" prefWidth="534.0">
                <font>
-                  <Font size="33.0" />
+                  <Font size="41.0" />
                </font>
+               <VBox.margin>
+                  <Insets left="5.0" />
+               </VBox.margin>
             </TextField>
          </children>
          <padding>
@@ -129,7 +132,7 @@
                   <DropShadow color="#cc0000" />
                </effect>
             </Button>
-            <Button fx:id="dot" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" prefHeight="59.0" prefWidth="100.0" text="." GridPane.columnIndex="2" GridPane.rowIndex="3">
+            <Button fx:id="dot" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#anyDigitClicked" prefHeight="59.0" prefWidth="100.0" text="." GridPane.columnIndex="2" GridPane.rowIndex="3">
                <font>
                   <Font size="33.0" />
                </font>
@@ -203,7 +206,7 @@
             </Button>
          </children>
          <padding>
-            <Insets left="25.0" right="25.0" top="20.0" />
+            <Insets left="30.0" right="25.0" top="20.0" />
          </padding>
       </GridPane>
    </children>
