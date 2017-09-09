@@ -22,6 +22,7 @@ public class Controller implements Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        screen.setText("0");
     }
 
 
@@ -36,9 +37,11 @@ public class Controller implements Initializable{
         String oldText = screen.getText();
         String newText;
 
-        if(oldText.equals("0")){
+        if(oldText.equals("0") && digit.equals(".")){
+            newText = oldText + digit;
+        }else if (oldText.equals("0")){
             newText = digit;
-        }else{
+        }else {
             newText = oldText + digit;
         }
 
@@ -58,7 +61,7 @@ public class Controller implements Initializable{
             }
 
             double nextNumber = Double.parseDouble(nextText);
-            
+
             switch (operation){
                 case "+":
                     doubleScore = firstDoubleNumber + nextNumber;
@@ -151,6 +154,4 @@ public class Controller implements Initializable{
         screen.setText("");
         operation = ((Button) event.getSource()).getText();
     }
-
-
 }

@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.effect.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.text.*?>
-<?import javafx.scene.control.*?>
-<?import java.lang.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="410.0" prefWidth="600.0" style="-fx-background-color: #000200;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="410.0" prefWidth="600.0" style="-fx-background-color: #0000ff;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
       <VBox prefHeight="115.0" prefWidth="600.0" spacing="20.0" AnchorPane.rightAnchor="0.0">
          <children>
@@ -51,6 +53,9 @@
                <GridPane.margin>
                   <Insets />
                </GridPane.margin>
+               <padding>
+                  <Insets bottom="3.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
             </Button>
             <Button fx:id="eight" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#anyDigitClicked" prefHeight="59.0" prefWidth="100.0" text="8" GridPane.columnIndex="1">
                <font>
@@ -59,6 +64,9 @@
                <effect>
                   <DropShadow color="#cc0000" />
                </effect>
+               <padding>
+                  <Insets bottom="3.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
             </Button>
             <Button fx:id="nine" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#anyDigitClicked" prefHeight="59.0" prefWidth="100.0" text="9" GridPane.columnIndex="2">
                <font>
@@ -67,6 +75,9 @@
                <effect>
                   <DropShadow color="#cc0000" />
                </effect>
+               <padding>
+                  <Insets bottom="3.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
             </Button>
             <Button fx:id="two" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#anyDigitClicked" prefHeight="59.0" prefWidth="100.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <font>
@@ -75,6 +86,9 @@
                <effect>
                   <DropShadow color="#cc0000" />
                </effect>
+               <padding>
+                  <Insets bottom="3.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
             </Button>
             <Button fx:id="three" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#anyDigitClicked" prefHeight="59.0" prefWidth="100.0" text="3" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <font>
@@ -83,6 +97,9 @@
                <effect>
                   <DropShadow color="#cc0000" />
                </effect>
+               <padding>
+                  <Insets bottom="3.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
             </Button>
             <Button fx:id="six" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#anyDigitClicked" prefHeight="59.0" prefWidth="100.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <font>
@@ -91,6 +108,9 @@
                <effect>
                   <DropShadow color="#cc0000" />
                </effect>
+               <padding>
+                  <Insets bottom="3.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
             </Button>
             <Button fx:id="four" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#anyDigitClicked" prefHeight="59.0" prefWidth="100.0" text="4" GridPane.rowIndex="1">
                <font>
@@ -99,6 +119,9 @@
                <effect>
                   <DropShadow color="#cc0000" />
                </effect>
+               <padding>
+                  <Insets bottom="3.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
             </Button>
             <Button fx:id="clear" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#clearClicked" prefHeight="59.0" prefWidth="100.0" text="clear" GridPane.rowIndex="3">
                <font>
@@ -107,6 +130,9 @@
                <effect>
                   <DropShadow color="#cc0000" />
                </effect>
+               <padding>
+                  <Insets bottom="5.0" top="5.0" />
+               </padding>
             </Button>
             <Button fx:id="five" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#anyDigitClicked" prefHeight="59.0" prefWidth="100.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <font>
@@ -115,6 +141,9 @@
                <effect>
                   <DropShadow color="#cc0000" />
                </effect>
+               <padding>
+                  <Insets bottom="3.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
             </Button>
             <Button fx:id="zero" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#anyDigitClicked" prefHeight="59.0" prefWidth="100.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <font>
@@ -123,6 +152,9 @@
                <effect>
                   <DropShadow color="#cc0000" />
                </effect>
+               <padding>
+                  <Insets bottom="3.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
             </Button>
             <Button fx:id="one" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#anyDigitClicked" prefHeight="59.0" prefWidth="100.0" text="1" GridPane.rowIndex="2">
                <font>
@@ -131,6 +163,9 @@
                <effect>
                   <DropShadow color="#cc0000" />
                </effect>
+               <padding>
+                  <Insets bottom="3.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
             </Button>
             <Button fx:id="dot" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#anyDigitClicked" prefHeight="59.0" prefWidth="100.0" text="." GridPane.columnIndex="2" GridPane.rowIndex="3">
                <font>
@@ -147,6 +182,9 @@
                <font>
                   <Font size="33.0" />
                </font>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
             </Button>
             <Button fx:id="backspace" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#backspaceButtonClicked" prefHeight="59.0" prefWidth="100.0" text="backspace" GridPane.columnIndex="4">
                <effect>
@@ -155,6 +193,9 @@
                <font>
                   <Font size="16.0" />
                </font>
+               <padding>
+                  <Insets bottom="5.0" top="5.0" />
+               </padding>
             </Button>
             <Button fx:id="multiply" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#someOperation" prefHeight="59.0" prefWidth="100.0" text="*" GridPane.columnIndex="3" GridPane.rowIndex="1">
                <effect>
@@ -163,6 +204,9 @@
                <font>
                   <Font size="32.0" />
                </font>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="15.0" />
+               </padding>
             </Button>
             <Button fx:id="sqr" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#sqrButtonClicked" prefHeight="59.0" prefWidth="100.0" text="sqr" GridPane.columnIndex="4" GridPane.rowIndex="1">
                <effect>
@@ -171,6 +215,9 @@
                <font>
                   <Font size="29.0" />
                </font>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
             </Button>
             <Button fx:id="subtract" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#someOperation" prefHeight="59.0" prefWidth="100.0" text="-" GridPane.columnIndex="3" GridPane.rowIndex="2">
                <effect>
@@ -179,6 +226,12 @@
                <font>
                   <Font size="33.0" />
                </font>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
             </Button>
             <Button fx:id="power" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#someOperation" prefHeight="59.0" prefWidth="100.0" text="pow" GridPane.columnIndex="4" GridPane.rowIndex="2">
                <effect>
@@ -187,6 +240,9 @@
                <font>
                   <Font size="30.0" />
                </font>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
             </Button>
             <Button fx:id="add" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#someOperation" prefHeight="59.0" prefWidth="100.0" text="+" GridPane.columnIndex="3" GridPane.rowIndex="3">
                <effect>
@@ -195,6 +251,9 @@
                <font>
                   <Font size="33.0" />
                </font>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
             </Button>
             <Button fx:id="equals" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#equalButtonClicked" prefHeight="59.0" prefWidth="100.0" text="=" GridPane.columnIndex="4" GridPane.rowIndex="3">
                <effect>
@@ -203,6 +262,9 @@
                <font>
                   <Font size="33.0" />
                </font>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
             </Button>
          </children>
          <padding>
